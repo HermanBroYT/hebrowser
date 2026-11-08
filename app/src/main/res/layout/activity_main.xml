@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <!-- Панель навигации -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:orientation="horizontal"
+        android:background="?attr/colorPrimary"
+        android:padding="4dp">
+
+        <Button
+            android:id="@+id/btnBack"
+            android:layout_width="48dp"
+            android:layout_height="match_parent"
+            android:text="←"
+            android:textColor="@android:color/white"
+            android:backgroundTint="@android:color/transparent"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/btnForward"
+            android:layout_width="48dp"
+            android:layout_height="match_parent"
+            android:text="→"
+            android:textColor="@android:color/white"
+            android:backgroundTint="@android:color/transparent"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/btnRefresh"
+            android:layout_width="48dp"
+            android:layout_height="match_parent"
+            android:text="⟳"
+            android:textColor="@android:color/white"
+            android:backgroundTint="@android:color/transparent"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/urlEditText"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:hint="@string/enter_url"
+            android:textColor="@android:color/white"
+            android:textColorHint="#AAFFFFFF"
+            android:background="@android:color/transparent"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:imeOptions="actionGo"
+            android:inputType="textUri"
+            android:singleLine="true" />
+
+        <Button
+            android:id="@+id/btnGo"
+            android:layout_width="56dp"
+            android:layout_height="match_parent"
+            android:text="@string/go"
+            android:textColor="@android:color/white"
+            android:backgroundTint="@android:color/transparent"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <!-- Индикатор загрузки -->
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:visibility="gone" />
+
+    <!-- WebView для отображения веб-страниц -->
+    <WebView
+        android:id="@+id/webView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+</LinearLayout>
