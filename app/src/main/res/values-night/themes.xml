@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <style name="Theme.HeBrowser" parent="Theme.MaterialComponents.DayNight.NoActionBar">
-        <item name="colorPrimary">#3700B3</item>
-        <item name="colorPrimaryDark">#000000</item>
-        <item name="colorAccent">#03DAC5</item>
-        <item name="android:statusBarColor">#000000</item>
-    </style>
-</resources>
